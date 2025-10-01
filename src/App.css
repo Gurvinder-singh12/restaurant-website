@@ -1,0 +1,82 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+} */
+
+* {
+    font-family:cursive;
+}
+.navbar .nav-link {
+  color: white; /* Default color */
+  transition: color 0.3s ease; 
+}
+
+.navbar .nav-link:hover {
+  color: rgb(239, 243, 7); /* 👈 Hover pe color change */
+}
+.navbar .nav-link.active {
+  color:  rgb(239, 243, 7)!important; /* active link hamesha red */
+}
+.carousel-img {
+  height: 44rem;     /* jitni chhoti chahiye */
+  object-fit: cover; /* image crop hoke fit hogi */
+  /* margin-top: 25px;
+  margin-bottom: 25px; */
+}
+.card-dishimg{
+  height: 11rem;
+  border-radius: 30px;
+  /* width: 50rem; */
+}
+.menu-cards {
+  
+    margin: auto;
+    /* margin-top: 10rem; */
+    width: 65rem;
+}
+ .menu-link{
+  margin:  auto;
+  justify-items: center;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+.price{
+  margin-right: auto;
+}
+.bookingform{
+  height:30rem;
+  max-width:50rem;
+   /* margin:auto;  */
+  margin-top: 20rem !important ; 
+  /* background-color: black; */
+}
+.menu-cards .nav-link {
+  transition: color 1.5s ease; 
+}
+
+ .menu-cards .nav-link:focus{
+  color: rgb(239, 243, 7)!important; /* Hover pe color change */
+background-color: black;
+border-radius: 20px;
+ }
+ .footer{
+  height: 16rem;
+ }
+.footer-text{
+      margin: 12px;
+    padding-left: 14rem;
+    padding-top: 3rem
+}
+.footer-info{
+      margin: 12px;
+    padding-left: 14rem;
+    /* padding-top: 2rem */
+}
+.order-btn{
+  padding-left: 18rem;
+  margin-top: 20px;
+}
+.toast-msg{
+  background-color: red;
+}

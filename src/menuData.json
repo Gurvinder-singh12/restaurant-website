@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Fried Momos",
+    "price": 120,
+    "photo": "./images/fried-momos.jpeg",
+    "ingredients": ["Cabbage,", "Carrot,", "Onion,", "Chutney"],
+    "category": "Momos"
+  },
+  {
+    "id": 2,
+    "name": "Tandoori Momos",
+    "price": 150,
+    "photo": "/images/Tandoori-Momos-1.jpeg",
+    "ingredients": ["Cabbage,", "Carrot,", "Onion,", "Sauce"],
+    "category": "Momos"
+  },
+  {
+    "id": 3,
+    "name": "Steam Momos",
+    "price": 250,
+    "photo": "/images/Weight-Loss-Momos-Recipe-scaled.webp",
+    "ingredients": ["Paneer,", "Capsicum,", "Cheese,", "Tomato Sauce"],
+    "category": "Momos"
+  },
+  {
+    "id": 4,
+    "name": "Tomato Paneer Pizza",
+    "price": 250,
+    "photo": "/images/paneer-pizza-recipe-1.jpg",
+    "ingredients": ["Paneer,", "Tomato,", "Cheese"],
+    "category": "Pizza"
+  },
+  {
+    "id": 5,
+    "name": "Classic Cheese Pizza",
+    "price": 250,
+    "photo": "/images/classic-cheese-pizza.jpg",
+    "ingredients": ["Paneer,", "Cheese"],
+    "category": "Pizza"
+  },
+  {
+    "id": 6,
+    "name": "Paneer Pizza",
+    "price": 250,
+    "photo": "/images/pizza.avif",
+    "ingredients": ["Paneer,","Cheese"],
+    "category": "Pizza"
+  },
+  {
+    "id": 7,
+    "name": "Aloo Tikki Burger",
+    "price": 250,
+    "photo": "/images/McAloo-tikki1.jpg",
+    "ingredients": ["Potato Patty,", "Lettuce"],
+    "category": "Burger"
+  },
+  {
+    "id": 8,
+    "name": "Loaded Burger",
+    "price": 250,
+    "photo": "/images/Burger.jpg",
+    "ingredients": [" Double Patty,", "Cheese,", "Onion"],
+    "category": "Burger"
+  },
+  {
+    "id": 9,
+    "name": "Aloo Jalapeno Tikki Burger",
+    "price": 250,
+    "photo": "/images/Aloo_Jalapeno_Tikki_Burger.webp",
+    "ingredients": ["Potato Patty,", "Jalapeno,", "Cheese"],
+    "category": "Burger"
+  },
+  {
+    "id": 10,
+    "name": "Blue Mojito",
+    "price": 250,
+    "photo": "/images/blue-mojito.jpg",
+    "ingredients": ["Lemon,", "Mint,", "Soda,", "Syrup"],
+    "category": "Drinks"
+  },
+  {
+    "id": 11,
+    "name": "Strawberry Mojito",
+    "price": 250,
+    "photo": "/images/strawberry-mojito.jpg",
+    "ingredients": ["Strawberry,", "Mint,", "Soda,", "Syrup"],
+    "category": "Drinks"
+  },
+  {
+    "id": 12,
+    "name": "Lemon Coriander Mojito",
+    "price": 250,
+    "photo": "/images/mojito-sq.jpg",
+    "ingredients": ["Lemon,", "Coriander,", "Mint,", "Soda"],
+    "category": "Drinks"
+  }
+]
