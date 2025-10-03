@@ -1,7 +1,9 @@
-import Carousel from "react-bootstrap/Carousel";
+import { Carousel, Button, Card, NavLink } from "react-bootstrap";
 import home1image from "../assets/6886efa1f87e23af38fea5ecd1c6d33c.avif";
 import home2image from "../assets/delicious-pizza-studio_23-2151846558.jpg";
 import home3image from "../assets/pngtree-golden-burger-against-black-background-3d-rendering-and-illustration-image_3766152.jpg";
+import aboutImg from "../assets/resturantImg.png";
+import specialDish from "../specialDishes.json";
 const Home = () => {
   return (
     <>
@@ -30,7 +32,74 @@ const Home = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      <div className="about-section">
+        <div className="about-text">
+          <h1 style={{display:"flex",  margin:"auto"}}>About Us</h1>
+          <p>
+            Welcome to Apna Restaurant, where taste meets tradition. We serve
+            freshly prepared dishes made with quality ingredients, bringing you
+            the perfect mix of flavors and comfort. With a cozy ambience and
+            dedicated chefs, we make every meal a memorable experience.
+            <br />
+            <a href="/team">Read More.....</a>
+          </p>
+        </div>
+        <div className="about-img">
+          <img alt="resturant-img" src={aboutImg} />
+        </div>
+      </div>
+      <div className="dish-section">
+        <div className="section-name" style={{display:"flex"}}>
+        <h1 style={{ marginLeft: "7rem",fontSize:"30px" }}>Special Dishes</h1>
+        </div>
+        <div className="special-Dishes">
+          {specialDish.map((dish) => (
+            <Card
+              border="warning"
+              bg="dark"
+              text="light"
+              style={{
+                width: "18rem",
+                height: "21rem",
+                marginBottom: "1rem",
+                borderRadius: "20px",
+              }}
+            >
+              <Card.Img
+                variant="top"
+                className="card-dishimg"
+                src={dish.photo}
+              />
+              <Card.Body>
+                <Card.Title>{dish.name}</Card.Title>
+                <Card.Text>{dish.ingredients}</Card.Text>
+
+                {/* <Button variant="primary">Add</Button> */}
+              </Card.Body>
+            </Card>
+          ))}
+        </div>
+        <a
+          style={{
+           
+          }}
+          href="/menu"
+        >
+          View Full Menu
+        </a>
+      </div>
     </>
   );
 };
 export default Home;
+// <Card style={{ width: '18rem' }}>
+//     <Card.Img variant="bottom" src={cardImg}/>
+//     <Card.Body>
+//       <Card.Title>Card Title</Card.Title>
+//       <Card.Text>
+//         Some quick example text to build on the card title and make up the
+//         bulk of the card's content.
+//       </Card.Text>
+//       <Button variant="primary">Go somewhere</Button>
+//     </Card.Body>
+//   </Card>

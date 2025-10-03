@@ -1,11 +1,20 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
-  font-family: 'Poppins', sans-serif;
-} */
+  background-color: black;
+  /* color: white; */
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-* {
-    font-family:cursive;
+h1{
+  color: rgb(243, 243, 6)!important;
+  /* background-color: #1a1a1a; */
+}
+.dish-section a{
+  color: yellow!important;
+  font-size:20px;
+  display:grid;
+  align-content: center;
+  justify-content:space-around;
 }
 .navbar .nav-link {
   color: white; /* Default color */
@@ -24,11 +33,28 @@ body {
   /* margin-top: 25px;
   margin-bottom: 25px; */
 }
-.card-dishimg{
-  height: 11rem;
-  border-radius: 30px;
-  /* width: 50rem; */
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a !important; /* dark but not pure black */
+  border-radius: 20px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(255, 255, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 16px rgba(255, 255, 0, 0.3);
+}
+
+.card-dishimg {
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+/* .card-dishimg{ height: 11rem; border-radius: 30px; width: 50rem; } */
+
+
 .menu-cards {
   
     margin: auto;
@@ -40,10 +66,28 @@ body {
   justify-items: center;
   margin-top: 4rem;
   margin-bottom: 1rem;
+  
 }
-.price{
-  margin-right: auto;
+.price {
+  font-weight: bold;
+  color: yellow;
+  /* display: block; */
+  margin: 0.5rem 0;
 }
+.btn-warning {
+  background-color: yellow !important;
+  color: black !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn-warning:hover {
+  background-color: #fff200 !important;
+  box-shadow: 0 4px 10px rgba(255,255,0,0.4);
+}
+
+
 .bookingform{
   height:30rem;
   max-width:50rem;
@@ -53,30 +97,115 @@ body {
 }
 .menu-cards .nav-link {
   transition: color 1.5s ease; 
+  color: rgb(7, 7, 7);
 }
 
- .menu-cards .nav-link:focus{
-  color: rgb(239, 243, 7)!important; /* Hover pe color change */
+ /* .menu-cards .nav-link:focus{
+  color: yellow; Hover pe color change
 background-color: black;
 border-radius: 20px;
+ } */
+ .active-category {
+  color: yellow !important;
+  background-color: black !important;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+ .menu-cards .nav-link:hover{
+  color: yellow;
  }
+/* About */
+.about-section{
+  display: flex;
+  margin: 40px 40px;
+}
+.about-text ,
+.about-img
+{
+  display: flex;
+  flex-direction: column;
+}
+.about-text{
+  width:100%;
+  margin-left: 5rem;
+}
+.about-text h1 {
+  font-weight: 500;
+  font-size: 30px;
+  /* align-items: center; */
+  /* align-content: center; */
+  /* margin: auto; */
+}
+.about-text p{
+  font-size:clamp(15px, 1.6vw , 50px);
+  width: 80%;
+}
+/* .about-img{
+  align-items: end;
+} */
+.about-img img{
+  width:70%;
+  height: 90%;
+  align-items: center;
+  margin: auto;
+}
+.special-Dishes{
+  display: flex;
+ justify-content: space-around;
+}
  .footer{
   height: 16rem;
+  display: flex;
  }
-.footer-text{
-      margin: 12px;
-    padding-left: 14rem;
-    padding-top: 3rem
-}
-.footer-info{
-      margin: 12px;
-    padding-left: 14rem;
-    /* padding-top: 2rem */
-}
+ .footer-text, .footer-info, .timing{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+ }
+/* .footer-text{
+      margin:
+} */
 .order-btn{
   padding-left: 18rem;
   margin-top: 20px;
 }
 .toast-msg{
   background-color: red;
+  color: black!important;
+}
+@media screen and (max-width :768px) {
+  body{
+    background-color: #fff200!important;
+  }
+  .card{
+    display: flex;
+    background-color: #fff200;
+   flex-direction: row; 
+  }
+}
+.cart-icon {
+  position: relative;
+  display: inline-block;
+}
+.order-link{
+      background-color: black;
+    color: white;
+    position: fixed;
+    /* bottom: 0; */
+    z-index: 10000;
+    bottom: 5%;
+    right: 40%;
+    font-size: larger;
+}
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: yellow;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
 }

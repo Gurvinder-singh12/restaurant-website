@@ -9,6 +9,7 @@ import Team from './pages/Team';
 import Header from './components/Header';
 import BookingForm from './pages/BookingForm';
 import Footer from './components/Footer';
+import Cart from './components/Cart';
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from 'react-toastify';
 function App() {
@@ -17,6 +18,7 @@ function App() {
   return (
    <>
    <Header/>
+   <Cart/>
    <Routes>
    <Route index element={<Home/>}/>
    <Route path='menu'element={<Menu/>}/>

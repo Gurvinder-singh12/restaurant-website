@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Tandoori Momos",
+    "price": 150,
+    "photo": "/images/Tandoori-Momos-1.jpeg",
+    "ingredients": ["Cabbage,", "Carrot,", "Onion,", "Sauce"],
+    "category": "Momos"
+  },
+  {
+    "id": 2,
+    "name": "Special Spicy Paneer Pizza",
+    "price": 250,
+    "photo": "/images/pizza.avif",
+    "ingredients": ["Paneer,","Cheese,"],
+    "category": "Pizza"
+  },
+ 
+  {
+    "id": 3,
+    "name": "Lemon Coriander Mojito",
+    "price": 250,
+    "photo": "/images/mojito-sq.jpg",
+    "ingredients": ["Lemon,", "Coriander,", "Mint,", "Soda"],
+    "category": "Drinks"
+  }
+]
