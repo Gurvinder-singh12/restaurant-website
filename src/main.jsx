@@ -4,11 +4,13 @@ import { BrowserRouter } from "react-router";
 import App from './App.jsx'
 import{Provider} from "react-redux";
 import{store} from"../src/app/store.js";
+import Scrollling from './components/Scrolling.jsx';
 
 createRoot(document.getElementById('root')).render(
-  <Provider store={store}>
   <BrowserRouter>
+  <Provider store={store}>
+    <Scrollling/>
     <App />
-    </BrowserRouter>
     </Provider>
+    </BrowserRouter>
 )

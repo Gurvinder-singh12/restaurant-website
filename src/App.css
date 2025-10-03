@@ -152,7 +152,7 @@ border-radius: 20px;
 }
 .special-Dishes{
   display: flex;
- justify-content: space-around;
+ justify-content: center;
 }
  .footer{
   height: 16rem;

@@ -4,7 +4,18 @@ import home2image from "../assets/delicious-pizza-studio_23-2151846558.jpg";
 import home3image from "../assets/pngtree-golden-burger-against-black-background-3d-rendering-and-illustration-image_3766152.jpg";
 import aboutImg from "../assets/resturantImg.png";
 import specialDish from "../specialDishes.json";
+import { useNavigate } from "react-router";
+import Marquee from "react-fast-marquee";
 const Home = () => {
+  const navigate=useNavigate();
+
+  const viewFullMenu=()=>{
+    navigate("/menu");
+  }
+const goToAbout=()=>{
+  navigate("/team")
+}
+
   return (
     <>
       <Carousel fade>
@@ -41,7 +52,7 @@ const Home = () => {
             the perfect mix of flavors and comfort. With a cozy ambience and
             dedicated chefs, we make every meal a memorable experience.
             <br />
-            <a href="/team">Read More.....</a>
+            <button onClick={goToAbout}>Read More.....</button>
           </p>
         </div>
         <div className="about-img">
@@ -53,40 +64,44 @@ const Home = () => {
         <h1 style={{ marginLeft: "7rem",fontSize:"30px" }}>Special Dishes</h1>
         </div>
         <div className="special-Dishes">
+          {/* <Marquee pauseOnHover={true} speed={60}> */}
           {specialDish.map((dish) => (
             <Card
               border="warning"
               bg="dark"
               text="light"
               style={{
-                width: "18rem",
-                height: "21rem",
+                width: "10rem",
+                height: "13rem",
                 marginBottom: "1rem",
                 borderRadius: "20px",
+                marginLeft:"20px"
               }}
             >
               <Card.Img
+              style={{height:"50%"}}
                 variant="top"
                 className="card-dishimg"
                 src={dish.photo}
               />
               <Card.Body>
-                <Card.Title>{dish.name}</Card.Title>
-                <Card.Text>{dish.ingredients}</Card.Text>
+                <Card.Title style={{fontSize:"14px", marginTop:"20px"}}>{dish.name}</Card.Title>
+                {/* <Card.Text>{dish.ingredients}</Card.Text> */}
 
                 {/* <Button variant="primary">Add</Button> */}
               </Card.Body>
             </Card>
           ))}
+          {/* </Marquee> */}
         </div>
-        <a
+        <button onClick={viewFullMenu}
           style={{
            
           }}
           href="/menu"
         >
           View Full Menu
-        </a>
+        </button>
       </div>
     </>
   );

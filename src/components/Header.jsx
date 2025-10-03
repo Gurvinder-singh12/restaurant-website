@@ -2,10 +2,9 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router";
-// import NavDropdown from 'react-bootstrap/NavDropdown';
-// import { useSelector } from "react-redux";
 const Header = () => {
   // const itemsCount = useSelector((state)=>state.cart.items.length);
+
   return (
     <>
       <Navbar data-bs-theme="dark" sticky="top" style={{ height: "5rem", backgroundColor:"black" }}>
