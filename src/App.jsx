@@ -18,7 +18,7 @@ function App() {
   return (
    <>
    <Header/>
-   <Cart/>
+   {/* <Cart/> */}
    <Routes>
    <Route index element={<Home/>}/>
    <Route path='menu'element={<Menu/>}/>
