@@ -95,9 +95,7 @@ const goToAbout=()=>{
           {/* </Marquee> */}
         </div>
         <button onClick={viewFullMenu}
-          style={{
-           
-          }}
+        className="btn-warning mx-auto d-flex font-size-16 font-weight-900 btn"
           href="/menu"
         >
           View Full Menu
