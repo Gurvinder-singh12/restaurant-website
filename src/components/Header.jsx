@@ -3,14 +3,13 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router";
 const Header = () => {
-  // const itemsCount = useSelector((state)=>state.cart.items.length);
 
   return (
     <>
       <Navbar data-bs-theme="dark" sticky="top" style={{ height: "5rem", backgroundColor:"black" }}>
         <Container>
           <Navbar.Brand to="/">Apna Restaurant</Navbar.Brand>
-          <Nav className=" mx-auto fs-6 gap-5">
+          <Nav className=" d-none d-md-flex mx-auto fs-6 gap-5 ">
             <Nav.Link as={NavLink} to="/">
               HOME
             </Nav.Link>
@@ -21,13 +20,10 @@ const Header = () => {
               TEAM
             </Nav.Link>
           </Nav>
-          {/* <Nav.Link className="cart-icon mx-4" >
-              <i className="bi bi-cart-fill fs-4"></i>
-  <span className="cart-badge">{itemsCount}</span>
-          </Nav.Link> */}
-          <Nav.Link as={NavLink} to="/booktable" className="ms-right">
+          <Nav.Link as={NavLink} to="/booktable" className="d-none d-md-flex ms-right">
             BOOK A TABLE
           </Nav.Link>
+          <div className="text-white text-2xl md:hidden ">&#9776;</div>
         </Container>
       </Navbar>
     </>

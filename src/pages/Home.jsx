@@ -43,64 +43,82 @@ const goToAbout=()=>{
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-      <div className="about-section">
-        <div className="about-text">
-          <h1 style={{display:"flex",  margin:"auto"}}>About Us</h1>
-          <p>
-            Welcome to Apna Restaurant, where taste meets tradition. We serve
-            freshly prepared dishes made with quality ingredients, bringing you
-            the perfect mix of flavors and comfort. With a cozy ambience and
-            dedicated chefs, we make every meal a memorable experience.
-            <br />
-            <button onClick={goToAbout}>Read More.....</button>
-          </p>
-        </div>
-        <div className="about-img">
-          <img alt="resturant-img" src={aboutImg} />
-        </div>
-      </div>
-      <div className="dish-section">
-        <div className="section-name" style={{display:"flex"}}>
-        <h1 style={{ marginLeft: "7rem",fontSize:"30px" }}>Special Dishes</h1>
-        </div>
-        <div className="special-Dishes">
-          {/* <Marquee pauseOnHover={true} speed={60}> */}
-          {specialDish.map((dish) => (
-            <Card
-              border="warning"
-              bg="dark"
-              text="light"
-              style={{
-                width: "10rem",
-                height: "13rem",
-                marginBottom: "1rem",
-                borderRadius: "20px",
-                marginLeft:"20px"
-              }}
-            >
-              <Card.Img
-              style={{height:"50%"}}
-                variant="top"
-                className="card-dishimg"
-                src={dish.photo}
-              />
-              <Card.Body>
-                <Card.Title style={{fontSize:"14px", marginTop:"20px"}}>{dish.name}</Card.Title>
-                {/* <Card.Text>{dish.ingredients}</Card.Text> */}
 
-                {/* <Button variant="primary">Add</Button> */}
-              </Card.Body>
-            </Card>
-          ))}
-          {/* </Marquee> */}
+      {/* About us Section */}
+    <div className="about-section flex flex-col md:flex-row justify-between items-center p-6 gap-6">
+  {/* Text Section */}
+  <div className="about-text md:w-1/2 w-full text-center md:text-left">
+    <h1 className="text-3xl font-bold mb-4">About Us</h1>
+    <p className=" leading-relaxed mb-4">
+      Welcome to Apna Restaurant, where taste meets tradition. We serve
+      freshly prepared dishes made with quality ingredients, bringing you
+      the perfect mix of flavors and comfort. With a cozy ambience and
+      dedicated chefs, we make every meal a memorable experience.
+    </p>
+    <button
+      onClick={goToAbout}
+      className="mt-2 px-5 py-2 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-lg transition"
+    >
+      Read More...
+    </button>
+  </div>
+
+  {/* Image Section */}
+  <div className="about-img md:w-1/2 w-full flex justify-center">
+    <img
+      src={aboutImg}
+      alt="restaurant-img"
+      className="rounded-2xl w-80 md:w-[90%] object-cover"
+    />
+  </div>
+</div>
+
+  <div className="dish-section py-10 overflow-hidden">
+  {/* Section Title */}
+  <h1 className="relative text-center text-4xl md:text-5xl font-bold mb-14  tracking-wide drop-shadow-[0_2px_6px_rgba(255,215,0,0.3)]">
+    Special Dishes
+  </h1>
+
+  {/* Dishes Grid */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-14 px-6 md:px-28">
+    {specialDish.map((dish, index) => (
+      <div
+        key={index}
+        className="rounded-2xl  overflow-hidden shadow-lg hover:shadow-[0_0_25px_rgba(255,215,0,0.4)] transition-all duration-300 transform hover:-translate-y-2"
+      >
+        {/* Dish Image */}
+        <div className="overflow-hidden">
+          <img
+            src={dish.photo}
+            alt={dish.name}
+            className="h-48 w-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-in-out"
+          />
         </div>
-        <button onClick={viewFullMenu}
-        className="btn-warning mx-auto d-flex font-size-16 font-weight-900 btn"
-          href="/menu"
-        >
-          View Full Menu
-        </button>
+
+        {/* Dish Info */}
+        <div className="p-2 my-4 text-center">
+          <h4 className="text-sm ">
+            {dish.name}
+          </h4>
+          <p className="p-4">{dish.ingredients}</p>
+        </div>
       </div>
+    ))}
+  </div>
+
+  {/* View Menu Button */}
+  <div className="relative flex justify-center mt-12">
+    <button
+      onClick={viewFullMenu}
+      className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-3 rounded-full shadow-md hover:shadow-yellow-500/40 transition-all duration-300 hover:scale-105"
+    >
+      View Full Menu
+    </button>
+  </div>
+</div>
+
+
+
     </>
   );
 };
