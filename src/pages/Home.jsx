@@ -91,7 +91,7 @@ const goToAbout=()=>{
           <img
             src={dish.photo}
             alt={dish.name}
-            className="h-48 w-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-in-out"
+            className="h-48 md:h-48 w-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-in-out"
           />
         </div>
 

@@ -8,8 +8,15 @@ const cartSlice= createSlice({
     initialState,
     reducers:{
         addToCart:(state,action)=>{
-            state.items.push(action.payload);
-            localStorage.setItem("cartItems",JSON.stringify(state.items));
+            const dish = action.payload;
+            const existingItem=state.items.find((items)=>items.id===dish.id);
+            if(existingItem){
+                existingItem.quantity +=1;    // only quantity increase if item already in cart
+            }else{
+                
+                state.items.push({...dish, quantity:1});
+                localStorage.setItem("cartItems",JSON.stringify(state.items));
+            }
         }
     }
 })
