@@ -67,28 +67,22 @@ Swal.fire({
                   <span className="text-yellow-400 font-bold">
                     ₹ {dish.price}
                   </span>
-                  {/* <button
-                    onClick={() => dispatch(addToCart(dish))}
-                    className="bg-yellow-500 hover:bg-yellow-600 text-black px-3 py-1 rounded-lg text-sm transition-all duration-300"
-                  >
-                    Add
-                  </button> */}
                   {cartItems.some((item) => item.id === dish.id) ? (
-  <div className="flex items-center gap-2">
+  <div className="flex items-center gap-2 bg-yellow-500 text-black   hover:bg-yellow-600 rounded-lg transition-all duration-300">
     <button
       onClick={() => dispatch(removeItem(dish.id))}
-      className="bg-yellow-500 hover:bg-yellow-600 text-black px-3 py-1 rounded-lg text-sm transition-all duration-300"
+      className="  px-3 py-1  "
     >
       −
     </button>
 
-    <span className="text-lg font-semibold text-black">
+    <span >
       {cartItems.find((item) => item.id === dish.id)?.quantity}
     </span>
 
     <button
       onClick={() => dispatch(addToCart(dish))}
-      className="bg-yellow-500 hover:bg-yellow-600 text-black px-3 py-1 rounded-lg text-sm transition-all duration-300"
+      className=" px-3 py-1 "
     >
       +
     </button>
@@ -115,6 +109,7 @@ Swal.fire({
             <p className="text-white">🛒 Your cart is empty</p>
           ) : (
             cartItems.map((item, index) => (
+              
               <div
                 key={index}
                 className="flex justify-between items-center text-white mb-3 border-b border-gray-700 pb-2"
@@ -122,26 +117,29 @@ Swal.fire({
               <div className="dish-name">
         <h5>{item.name}</h5>
         </div>
-        <div className="quantity-btn">       
+        <div className="quantity-btn">
+          <div className="bg-yellow-500 hover:bg-yellow-600 text-black  rounded">       
           <button
           onClick={() => dispatch(removeItem(item.id))}
-          className="bg-yellow-500 hover:bg-yellow-600 text-black px-1 rounded"
+          className=" px-2 "
         >
           −
         </button>
-        <span className="text-sm mx-1 font-semibold text-white">{item.quantity}</span>
+        <span className="text-sm mx-1 ">{item.quantity}</span>
         <button
           onClick={() => dispatch(addToCart(item))}
-          className="bg-yellow-500 hover:bg-yellow-600 text-black px-1  rounded"
+          className="px-2"
         >
           +
         </button>
+        </div>
       {/* </div> */}
       <div className="price">
-                  <span className="text-white">₹ {item.price* item.quantity}</span>
+                  <span className="text-white mx-2">₹ {item.price* item.quantity}</span>
                   </div>
                   </div>
               </div>
+            
             ))
           )}
           {cartItems.length > 0 && (
@@ -192,23 +190,25 @@ Swal.fire({
                  <div className="dish-name">
         <h5>{item.name}</h5>
         </div>
-        <div className="quantity-btn">       
+      <div className="quantity-btn">
+          <div className="bg-yellow-500 hover:bg-yellow-600 text-black  rounded">       
           <button
           onClick={() => dispatch(removeItem(item.id))}
-          className="bg-yellow-500 hover:bg-yellow-600 text-black px-1 rounded"
+          className=" px-2 "
         >
           −
         </button>
-        <span className="text-sm mx-1 font-semibold text-white">{item.quantity}</span>
+        <span className="text-sm mx-1 ">{item.quantity}</span>
         <button
           onClick={() => dispatch(addToCart(item))}
-          className="bg-yellow-500 hover:bg-yellow-600 text-black px-1  rounded"
+          className="px-2"
         >
           +
         </button>
+        </div>
       {/* </div> */}
       <div className="price">
-                  <span className="text-yellow-400">₹ {item.price* item.quantity}</span>
+                  <span className="text-white mx-2">₹ {item.price* item.quantity}</span>
                   </div>
                   </div>
  
