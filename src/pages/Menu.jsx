@@ -2,7 +2,7 @@ import { Nav } from "react-bootstrap";
 import menuData from "../menuData.json";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../features/cartSlice";
+import { addToCart, removeItem } from "../features/cartSlice";
 import { useNavigate } from "react-router";
 import Swal from 'sweetalert2'
 
@@ -90,7 +90,13 @@ Swal.fire({
                 key={index}
                 className="flex justify-between items-center text-white mb-3 border-b border-gray-700 pb-2"
               >
-                <h5>{item.name} X {item.quantity}</h5>
+                <h5>{item.name} X {item.quantity}
+                  <span>
+                    <button onClick={()=>dispatch(removeItem(item.id))} >
+                      {/* <Lott */} <i className="bi bi-trash text-red-600 text-2xl "></i>
+                    </button>
+                  </span>
+                </h5>
                 <span className="text-yellow-400">₹ {item.price * item.quantity }</span>
               </div>
             ))
@@ -139,7 +145,13 @@ Swal.fire({
                   key={index}
                   className="flex justify-between items-center mb-3 border-b border-gray-700 pb-2"
                 >
-                  <h5>{item.name} X {item.quantity}</h5>
+                  <h5>{item.name} X {item.quantity}
+                      <span>
+                    <button onClick={()=>dispatch(removeItem(item.id))} >
+                      {/* <Lott */} <i className="bi bi-trash text-red-600 text-2xl "></i>
+                    </button>
+                  </span>
+                  </h5>
                   <span className="text-yellow-400">₹ {item.price* item.quantity}</span>
                 </div>
               ))
