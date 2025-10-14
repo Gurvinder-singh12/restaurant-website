@@ -67,12 +67,41 @@ Swal.fire({
                   <span className="text-yellow-400 font-bold">
                     ₹ {dish.price}
                   </span>
-                  <button
+                  {/* <button
                     onClick={() => dispatch(addToCart(dish))}
                     className="bg-yellow-500 hover:bg-yellow-600 text-black px-3 py-1 rounded-lg text-sm transition-all duration-300"
                   >
                     Add
-                  </button>
+                  </button> */}
+                  {cartItems.some((item) => item.id === dish.id) ? (
+  <div className="flex items-center gap-2">
+    <button
+      onClick={() => dispatch(removeItem(dish.id))}
+      className="bg-yellow-500 hover:bg-yellow-600 text-black px-3 py-1 rounded-lg text-sm transition-all duration-300"
+    >
+      −
+    </button>
+
+    <span className="text-lg font-semibold text-black">
+      {cartItems.find((item) => item.id === dish.id)?.quantity}
+    </span>
+
+    <button
+      onClick={() => dispatch(addToCart(dish))}
+      className="bg-yellow-500 hover:bg-yellow-600 text-black px-3 py-1 rounded-lg text-sm transition-all duration-300"
+    >
+      +
+    </button>
+  </div>
+) : (
+  <button
+    onClick={() => dispatch(addToCart(dish))}
+    className="bg-yellow-500 hover:bg-yellow-600 text-black px-3 py-1 rounded-lg text-sm transition-all duration-300"
+  >
+    Add
+  </button>
+)}
+
                 </div>
               </div>
             </div>
@@ -90,14 +119,28 @@ Swal.fire({
                 key={index}
                 className="flex justify-between items-center text-white mb-3 border-b border-gray-700 pb-2"
               >
-                <h5>{item.name} X {item.quantity}
-                  <span>
-                    <button onClick={()=>dispatch(removeItem(item.id))} >
-                      {/* <Lott */} <i className="bi bi-trash text-red-600 text-2xl "></i>
-                    </button>
-                  </span>
-                </h5>
-                <span className="text-yellow-400">₹ {item.price * item.quantity }</span>
+              <div className="dish-name">
+        <h5>{item.name}</h5>
+        </div>
+        <div className="quantity-btn">       
+          <button
+          onClick={() => dispatch(removeItem(item.id))}
+          className="bg-yellow-500 hover:bg-yellow-600 text-black px-1 rounded"
+        >
+          −
+        </button>
+        <span className="text-sm mx-1 font-semibold text-white">{item.quantity}</span>
+        <button
+          onClick={() => dispatch(addToCart(item))}
+          className="bg-yellow-500 hover:bg-yellow-600 text-black px-1  rounded"
+        >
+          +
+        </button>
+      {/* </div> */}
+      <div className="price">
+                  <span className="text-white">₹ {item.price* item.quantity}</span>
+                  </div>
+                  </div>
               </div>
             ))
           )}
@@ -145,14 +188,30 @@ Swal.fire({
                   key={index}
                   className="flex justify-between items-center mb-3 border-b border-gray-700 pb-2"
                 >
-                  <h5>{item.name} X {item.quantity}
-                      <span>
-                    <button onClick={()=>dispatch(removeItem(item.id))} >
-                      {/* <Lott */} <i className="bi bi-trash text-red-600 text-2xl "></i>
-                    </button>
-                  </span>
-                  </h5>
+                 {/* <div className="flex items-center gap-2"> */}
+                 <div className="dish-name">
+        <h5>{item.name}</h5>
+        </div>
+        <div className="quantity-btn">       
+          <button
+          onClick={() => dispatch(removeItem(item.id))}
+          className="bg-yellow-500 hover:bg-yellow-600 text-black px-1 rounded"
+        >
+          −
+        </button>
+        <span className="text-sm mx-1 font-semibold text-white">{item.quantity}</span>
+        <button
+          onClick={() => dispatch(addToCart(item))}
+          className="bg-yellow-500 hover:bg-yellow-600 text-black px-1  rounded"
+        >
+          +
+        </button>
+      {/* </div> */}
+      <div className="price">
                   <span className="text-yellow-400">₹ {item.price* item.quantity}</span>
+                  </div>
+                  </div>
+ 
                 </div>
               ))
             )}

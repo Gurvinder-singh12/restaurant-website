@@ -22,7 +22,7 @@ function App() {
    <Route index element={<Home/>}/>
    <Route path='menu'element={<Menu/>}/>
    <Route path='team'element={<Team/>}/>
-   <Route path='booktable'element={<BookingForm/>}/>
+   {/* <Route path='booktable'element={<BookingForm/>}/> */}
    </Routes>
    <Footer/>
    <ToastContainer position='top-right' autoClose={3000}/>
