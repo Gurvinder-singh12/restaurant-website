@@ -3,19 +3,19 @@
     "name": "Ravi Sharma",
     "role": "Head Chef",
     "imageUrl":
-    "../public/images/team images/headChef.jpg"
+    "/images/team images/headChef.jpg"
   },
   {
    "name": "Priya Kapoor",
     "role": "Restaurant Manager",
     "imageUrl":
-      "../public/images/team images/Manager.jpg"
+      "/images/team images/Manager.jpg"
   },
   {
     "name": "Karan Singh",
     "role": "Chef",
     "imageUrl":
-      "../public/images/team images/chef.jpg"
+      "/images/team images/chef.jpg"
   },
   {
     "name": "Vanshika Sharma",

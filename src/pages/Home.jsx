@@ -1,11 +1,10 @@
 import { Carousel, Button, Card, NavLink } from "react-bootstrap";
 import home1image from "/images/resturant/exterior .jpg";
-import home2image from "../assets/delicious-pizza-studio_23-2151846558.jpg";
-import home3image from "../assets/McAloo-Tikki-e1546517688902-1.png";
-import aboutImg from "../assets/resturantImg.png";
+import home2image from "/images/Paneer-Pizza.jpg";
+import home3image from "/images/macalooo.jpg";
+import aboutImg from "/images/resturant/resturantImg.png";
 import specialDish from "../specialDishes.json";
 import { useNavigate } from "react-router";
-import Marquee from "react-fast-marquee";
 const Home = () => {
   const navigate=useNavigate();
 
@@ -33,7 +32,7 @@ const goToAbout=()=>{
   {/* Slide 2 - Pizza */}
   <Carousel.Item>
     <img className="d-block w-100 carousel-img" src={home2image} alt="Pizza" />
-    <Carousel.Caption >
+   <Carousel.Caption className="bg-blend-saturation p-4 rounded-lg ">
       <h3 className="text-3xl font-bold text-white">Freshly Baked Pizza</h3>
       <p className="text-gray-200 text-lg">
         Experience the perfect blend of crispy crust, melted cheese, and rich flavors straight from our kitchen.

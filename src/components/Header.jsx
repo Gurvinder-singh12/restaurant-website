@@ -13,6 +13,7 @@ const Header = () => {
     <>
       <Navbar data-bs-theme="dark" sticky="top" style={{ height: "5rem", backgroundColor: "black" }}>
         <Container>
+          {/* <link rel="icon" type="image/svg+xml" href="/logo.png" /> */}
           <Navbar.Brand as={NavLink} to="/">Apna Restaurant</Navbar.Brand>
 
           {/* Desktop Links */}

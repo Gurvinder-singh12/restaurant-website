@@ -11,7 +11,7 @@
     "id": 2,
     "name": "Special Spicy Paneer Pizza",
     "price": 250,
-    "photo": "/images/pizza.avif",
+    "photo": "/images/Paneer-Pizza.jpg",
     "ingredients": ["Paneer,","Cheese,"],
     "category": "Pizza"
   },

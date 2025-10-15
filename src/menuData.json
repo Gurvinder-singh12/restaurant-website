@@ -27,7 +27,7 @@
     "id": 4,
     "name": "Tomato Paneer Pizza",
     "price": 250,
-    "photo": "/images/paneer-pizza-recipe-1.jpg",
+    "photo": "/images/tomato-paneer-pizza.jpg",
     "ingredients": ["Paneer,", "Tomato,", "Cheese"],
     "category": "Pizza"
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "name": "Paneer Pizza",
     "price": 250,
-    "photo": "/images/pizza.avif",
+    "photo": "/images/Paneer-Pizza.jpg",
     "ingredients": ["Paneer,","Cheese"],
     "category": "Pizza"
   },
