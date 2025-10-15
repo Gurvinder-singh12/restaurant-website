@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Ravi Sharma",
+    "role": "Head Chef",
+    "imageUrl":
+    "../public/images/team images/headChef.jpg"
+  },
+  {
+   "name": "Priya Kapoor",
+    "role": "Restaurant Manager",
+    "imageUrl":
+      "../public/images/team images/Manager.jpg"
+  },
+  {
+    "name": "Karan Singh",
+    "role": "Chef",
+    "imageUrl":
+      "../public/images/team images/chef.jpg"
+  },
+  {
+    "name": "Vanshika Sharma",
+    "role": "Pastry Chef",
+    "imageUrl":
+      "/images/team images/pastry chef.jpg"
+  },
+  {
+    "name": "karan Sharma",
+    "role": "Front of House Supervisor",
+    "imageUrl":
+      "/images/team images/Supervisor.jpg"
+  },
+  {
+    "name": "Jyoti Joshi",
+    "role": "Waitress",
+    "imageUrl":
+      "/images/team images/waitress.jpg"
+  }
+]

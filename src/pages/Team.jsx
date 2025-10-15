@@ -1,42 +1,4 @@
-const people = [
-  {
-    name: 'Ravi Sharma',
-    role: 'Head Chef',
-    imageUrl:
-    '../../public/images/team images/headChef.png',
-  },
-  {
-    name: 'Priya Kapoor',
-    role: 'Restaurant Manager',
-    imageUrl:
-      '../../public/images/team images/Manager.jpg',
-  },
-  {
-    name: 'Karan Singh',
-    role: 'Sous Chef',
-    imageUrl:
-      '../../public/images/team images/chef.jpg',
-  },
-  {
-    name: 'Priya Kapoor',
-    role: 'Pastry Chef',
-    imageUrl:
-      '../../public/images/team images/Manager.jpg',
-  },
-  {
-    name: 'Ravi Sharma',
-    role: 'Front of House Supervisor',
-    imageUrl:
-      '../../public/images/team images/headChef.png',
-  },
-  {
-    name: 'Sneha Joshi',
-    role: 'Waitress',
-    imageUrl:
-      '../../public/images/team images/waitress.jpg',
-  },
-]
-
+import teamData from "../teamData.json"
 export default function Team() {
   return (
     <div className="bg-white py-24 sm:py-32">
@@ -50,7 +12,7 @@ export default function Team() {
           </p>
         </div>
         <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
-          {people.map((person) => (
+          {teamData.map((person) => (
             <li key={person.name}>
               <div className="flex items-center gap-x-6">
                 <img

@@ -1,7 +1,7 @@
 import { Carousel, Button, Card, NavLink } from "react-bootstrap";
-import home1image from "../assets/6886efa1f87e23af38fea5ecd1c6d33c.avif";
+import home1image from "/images/resturant/exterior .jpg";
 import home2image from "../assets/delicious-pizza-studio_23-2151846558.jpg";
-import home3image from "../assets/pngtree-golden-burger-against-black-background-3d-rendering-and-illustration-image_3766152.jpg";
+import home3image from "../assets/McAloo-Tikki-e1546517688902-1.png";
 import aboutImg from "../assets/resturantImg.png";
 import specialDish from "../specialDishes.json";
 import { useNavigate } from "react-router";
@@ -18,31 +18,40 @@ const goToAbout=()=>{
 
   return (
     <>
-      <Carousel fade>
-        <Carousel.Item>
-          <img className="d-block w-100  carousel-img" src={home1image} />
-          <Carousel.Caption>
-            <h3>Fast Food Restaurant</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="d-block w-100 carousel-img" src={home2image} />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="d-block w-100 carousel-img" src={home3image} />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+    <Carousel fade interval={1500} indicators={true} controls={true}>
+  {/* Slide 1 - Restaurant Front */}
+  <Carousel.Item>
+    <img className="d-block w-100 carousel-img" src={home1image} alt="Restaurant Front" />
+    <Carousel.Caption >
+      <h3 className="text-3xl font-bold text-white">Welcome to Apna Restaurant</h3>
+      <p className="text-gray-200 text-lg">
+        Step inside and enjoy a warm ambiance, delicious aromas, and unforgettable dining moments.
+      </p>
+    </Carousel.Caption>
+  </Carousel.Item>
+
+  {/* Slide 2 - Pizza */}
+  <Carousel.Item>
+    <img className="d-block w-100 carousel-img" src={home2image} alt="Pizza" />
+    <Carousel.Caption >
+      <h3 className="text-3xl font-bold text-white">Freshly Baked Pizza</h3>
+      <p className="text-gray-200 text-lg">
+        Experience the perfect blend of crispy crust, melted cheese, and rich flavors straight from our kitchen.
+      </p>
+    </Carousel.Caption>
+  </Carousel.Item>
+
+  {/* Slide 3 - Burger */}
+  <Carousel.Item>
+    <img className="d-block w-100 carousel-img" src={home3image} alt="McAloo Burger" />
+    <Carousel.Caption >
+      <h3 className="text-3xl font-bold text-white">Signature McAloo Burger</h3>
+      <p className="text-gray-200 text-lg">
+        A crispy aloo patty layered with tangy sauces and fresh veggies — the true taste of India in every bite!
+      </p>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
 
       {/* About us Section */}
     <div className="about-section flex flex-col md:flex-row justify-between items-center p-6 gap-6">

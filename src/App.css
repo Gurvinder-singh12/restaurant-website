@@ -32,12 +32,18 @@ h1{
 .navbar .nav-link.active {
   color:  rgb(239, 243, 7)!important; /* active link hamesha red */
 }
+/* .carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 1.5rem;
+  backdrop-filter: blur(5px);
+} */
+
 .carousel-img {
-  height: 44rem;     /* jitni chhoti chahiye */
-  object-fit: cover; /* image crop hoke fit hogi */
-  /* margin-top: 25px;
-  margin-bottom: 25px; */
+  height: 90vh;
+  object-fit: cover;
 }
+
  .menu-link{
   margin:  auto;
   justify-items: center;
