@@ -13,11 +13,15 @@ const cartSlice= createSlice({
             const existingItem=state.items.find((items)=>items.id===dish.id);
             if(existingItem){
                 existingItem.quantity +=1;    // only quantity increase if item already in cart
-                toast.success("Added")
+                // toast.success("Added",{
+                //     toastId:"added"
+                // })
             }else{
                 
                 state.items.push({...dish, quantity:1});
-                toast.success("Item Added")
+                // toast.success("Dish Added",{
+                //     toastId:"dish-added"
+                // })
                 localStorage.setItem("cartItems",JSON.stringify(state.items));
             }
         },
@@ -32,7 +36,9 @@ const cartSlice= createSlice({
                     state.items=state.items.filter((items)=>items.id !== action.payload)
                 }
             }
-            toast.error("Item Removed")
+            // toast.error("Dish Removed",{
+            //     toastId:"dish-removed"
+            // })
             localStorage.setItem("cartItems",JSON.stringify(state.items));
         },
         clearCart: (state) => {

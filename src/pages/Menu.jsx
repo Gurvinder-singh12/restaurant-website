@@ -1,15 +1,12 @@
-import { Nav } from "react-bootstrap";
 import menuData from "../menuData.json";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeItem } from "../features/cartSlice";
-import { useNavigate } from "react-router";
 import Swal from 'sweetalert2'
 
 function Menu() {
   const [selectCategory, setSelectCategory] = useState("All");
   const [showCart, setShowCart] = useState(false);
-  const navigate=useNavigate
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
   const category = ["All", "Burger", "Momos", "Pizza", "Drinks"];
@@ -30,21 +27,21 @@ Swal.fire({
 }
 
   return (
-    <div className="menu-cards md:h-100">
-      <div className="menu-link text-center mb-3">
-        <h1 className="text-center mb-4">Our Menu</h1>
-        <Nav as="ul" className="justify-content-center">
+    <div className="md:h-100 py-5">
+      <div className=" m-auto  py-8 text-center mb-3">
+        <h1 className=" text-center text-5xl ">Our Menu</h1>
+        <ul className="justify-center flex md:flex py-5 space-x-5 cursor-pointer ">
           {category.map((cat) => (
-            <Nav.Item as="li" key={cat}>
-              <Nav.Link
-                className={selectCategory === cat ? "active-category" : ""}
+            <li key={cat}>
+              <div
+                className={selectCategory === cat ? " text-yellow-500 bg-black border px-2 rounded-full " : ""}
                 onClick={() => setSelectCategory(cat)}
               >
                 {cat}
-              </Nav.Link>
-            </Nav.Item>
+              </div>
+            </li>
           ))}
-        </Nav>
+        </ul>
       </div>
       {/* Left side Dish Section & Right side Cart Section only for PC & Laptop */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -53,7 +50,7 @@ Swal.fire({
           {FilterDishes.map((dish) => (
             <div
               key={dish.id}
-              className="rounded-2xl p-3 shadow-md hover:shadow-yellow-400/30 transition-all duration-300 flex items-center gap-4">
+              className="rounded-2xl p-3 shadow-md hover:shadow-yellow-400 transition-all duration-300 flex items-center gap-4">
               <img
                 src={dish.photo}
                 alt={dish.name}
@@ -206,7 +203,6 @@ Swal.fire({
           +
         </button>
         </div>
-      {/* </div> */}
       <div className="price">
                   <span className="text-white mx-2">₹ {item.price* item.quantity}</span>
                   </div>
@@ -230,7 +226,6 @@ Swal.fire({
         </div>
       )}
     </div>
-    // </div>
   );
 }
 

@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router";
 import BookingForm from "../pages/BookingForm";
@@ -11,22 +9,21 @@ const Header = () => {
 
   return (
     <>
-      <Navbar data-bs-theme="dark" sticky="top" style={{ height: "5rem", backgroundColor: "black" }}>
-        <Container>
-          {/* <link rel="icon" type="image/svg+xml" href="/logo.png" /> */}
+      <nav className="sticky top-0 z-50 h-72 py-5 bg-black text-white">
+        <div className="flex justify-between items-center w-full max-w-7xl mx-auto px-4 h-full">
           <Navbar.Brand as={NavLink} to="/">Apna Restaurant</Navbar.Brand>
 
           {/* Desktop Links */}
-          <Nav className="d-none d-md-flex mx-auto fs-6 gap-5">
-            <Nav.Link as={NavLink} to="/">HOME</Nav.Link>
-            <Nav.Link as={NavLink} to="/menu">MENU</Nav.Link>
-            <Nav.Link as={NavLink} to="/team">TEAM</Nav.Link>
-          </Nav>
+          <div className="hidden md:flex mx-auto space-x-24">
+            <NavLink to="/" className="hover:text-yellow-400 transition">HOME</NavLink>
+            <NavLink to="/menu"className="hover:text-yellow-400 transition">MENU</NavLink>
+            <NavLink to="/team"className="hover:text-yellow-400 transition">TEAM</NavLink>
+          </div>
 
           {/* Booking Button */}
-          <Nav.Link className="d-none d-md-flex ms-right" onClick={() => setShowBookingModal(true)}>
+          <NavLink className="hidden md:flex" onClick={() => setShowBookingModal(true)}>
             BOOK A TABLE
-          </Nav.Link>
+          </NavLink>
 
           {/* Hamburger Icon for Mobile */}
           <div
@@ -35,21 +32,21 @@ const Header = () => {
           >
             &#9776;
           </div>
-        </Container>
+        </div>
 
         {/* Sliding Mobile Menu */}
         <div
           className={`fixed top-0 left-0 w-full bg-black text-white flex flex-col items-center gap-5 p-10 transition-transform duration-300 ease-in-out z-50
             ${isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"}`}
         >
-          <Nav.Link as={NavLink} to="/" onClick={() => setIsMobileMenuOpen(false)}>HOME</Nav.Link>
-          <Nav.Link as={NavLink} to="/menu" onClick={() => setIsMobileMenuOpen(false)}>MENU</Nav.Link>
-          <Nav.Link as={NavLink} to="/team" onClick={() => setIsMobileMenuOpen(false)}>TEAM</Nav.Link>
-          <Nav.Link onClick={() => { setShowBookingModal(true); setIsMobileMenuOpen(false); }}>
+          <NavLink to="/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-yellow-400 transition">HOME</NavLink>
+          <NavLink to="/menu" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-yellow-400 transition">MENU</NavLink>
+          <NavLink to="/team" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-yellow-400 transition">TEAM</NavLink>
+          <NavLink onClick={() => { setShowBookingModal(true); setIsMobileMenuOpen(false); }}className="hover:text-yellow-400 transition">
             BOOK A TABLE
-          </Nav.Link>
+          </NavLink>
         </div>
-      </Navbar>
+      </nav>
 
       <BookingForm show={showBookingModal} setShow={setShowBookingModal} />
     </>

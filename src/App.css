@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  background-color: black;
+  /* background-color: black; */
   /* color: white; */
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
@@ -12,7 +12,6 @@ body {
 
 h1{
   color: rgb(243, 243, 6)!important;
-  /* background-color: #1a1a1a; */
 }
 .dish-section a{
   color: yellow!important;
@@ -32,12 +31,6 @@ h1{
 .navbar .nav-link.active {
   color:  rgb(239, 243, 7)!important; /* active link hamesha red */
 }
-/* .carousel-caption {
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  padding: 1.5rem;
-  backdrop-filter: blur(5px);
-} */
 
 .carousel-img {
   height: 90vh;
@@ -48,204 +41,31 @@ h1{
   margin:  auto;
   justify-items: center;
   margin-top: 4rem;
-  margin-bottom: 1rem;
-  
+  margin-bottom: 1rem; 
 }
 .bookingform{
   height:30rem;
   max-width:50rem;
-   /* margin:auto;  */
   margin-top: 20rem !important ; 
-  /* background-color: black; */
 }
-.menu-cards .nav-link {
+/* .menu-cards .nav-link {
   transition: color 1.5s ease; 
   color: rgb(7, 7, 7);
-}
+} */
 
- /* .menu-cards .nav-link:focus{
-  color: yellow; 
-background-color: black;
-border-radius: 20px;
- } */
  .active-category {
   color: yellow !important;
   background-color: black !important;
-  border-radius: 20px;
+  border-radius: 40px;
   font-weight: bold;
 }
 
  .menu-cards .nav-link:hover{
   color: yellow;
  }
-/* About */
-/* .about-section{
-  display: flex;
-  margin: 40px 40px;
-}
-.about-text ,
-.about-img
-{
-  display: flex;
-  flex-direction: column;
-}
-.about-text{
-  width:100%;
-  margin-left: 5rem;
-}
-.about-text h1 {
-  font-weight: 500;
-  font-size: 30px;
-  /* align-items: center; */
-  /* align-content: center; */
-  /* margin: auto; */
-/* }
-.about-text p{
-  font-size:clamp(15px, 1.6vw , 50px);
-  width: 80%;
-} */
 
-/* .about-img img{
-  width:70%;
-  height: 90%;
-  align-items: center;
-  margin: auto;
-}  */
-/* .special-Dishes{
-  display: flex;
- justify-content: center;
-} */
- /* .footer{
-  height: 16rem;
-  display: flex;
- }
- .footer-text, .footer-info, .timing{
-  display: flex;
-  flex-direction: column;
-  margin: auto;
- } */
-/* .footer-text{
-      margin:
-} */
-/* .order-btn{
-  padding-left: 18rem;
-  margin-top: 20px;
-} */
 .toast-msg{
   background-color: red;
   color: black!important;
 }
-/* .cart-badge {
-  position: absolute;
-  top: -5px;
-  right: -10px;
-  background: yellow;
-  color: black;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 12px;
-  font-weight: bold;
-} */
 
-/* 
-.dish-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 15px;
-  padding: 15px;
-  transition: 0.3s;
-} */
-
-/* .dish-item:hover {
-  transform: scale(1.01);
-  box-shadow: 0 4px 12px rgba(255, 255, 0, 0.2);
-} */
-
-/* Left image */
-/* .dish-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 12px;
-  object-fit: cover;
-} */
-
-/* Center info */
-/* .dish-info {
-  flex: 1;
-  margin-left: 15px;
-} */
-/* .dish-info h3 {
-  margin: 0;
-} */
-/* .dish-info p {
-  margin: 5px 0 0;
-  font-size: 14px;
-} */
-
-/* Right price + add */
-/* .dish-action {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-} */
-/* .price {
-  font-weight: bold;
-  color: yellow;
-  margin-bottom: 5px;
-} */
-
-/* .dish-list {
-  max-height: 100vh;
-  overflow-y:scroll;
-  padding-right: 8px;
-} */
-
-/* ===== CART SECTION ===== */
-/* .cart-section {
-  background-color: #1a1a1a;
-  border-radius: 15px;
-  padding: 20px;
-  color: white;
-  min-height: 25rem;
-  max-height: 450px; 
-  overflow-y: auto;  
-} */
-
-/* .cart-section::-webkit-scrollbar,
-.dish-list::-webkit-scrollbar {
-  width: 6px;
-}
-
-.cart-section::-webkit-scrollbar-thumb,
-.dish-list::-webkit-scrollbar-thumb {
-  background-color: yellow;
-  border-radius: 10px;
-} */
-
-/* .cart-section h2 {
-  color: yellow;
-  border-bottom: 2px solid yellow;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
-  position: sticky;
-  top: 0;
-  background: #1a1a1a;
-  z-index: 5;
-} */
-
-/* ===== CART ITEMS ===== */
-/* .cart-item {
-  background: #222;
-  border-radius: 10px;
-  padding: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} */
-
-/* .cart-item h5 {
-  color: yellow;
-  margin: 0;
-} */
