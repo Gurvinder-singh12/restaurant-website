@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Navbar from "react-bootstrap/Navbar";
+// import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router";
 import BookingForm from "../pages/BookingForm";
 
@@ -11,7 +11,7 @@ const Header = () => {
     <>
       <nav className="sticky top-0 z-50 h-72 py-5 bg-black text-white">
         <div className="flex justify-between items-center w-full max-w-7xl mx-auto px-4 h-full">
-          <Navbar.Brand as={NavLink} to="/">Apna Restaurant</Navbar.Brand>
+          <NavLink to="/">Apna Restaurant</NavLink>
 
           {/* Desktop Links */}
           <div className="hidden md:flex mx-auto space-x-24">
